@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;📖&lt;/text&gt;&lt;/svg&gt;">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+  <title>Symbolic Execution&nbsp;|&nbsp;Hi! </title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Symbolic Execution">
+  
+  
+    <meta property="og:image" content="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;🤪&lt;/text&gt;&lt;/svg&gt;">
+  
+  <style>
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;📖&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+      
+      <span>Home</span>
+    </div>
+  </a>
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;😀&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+          
+          <span>About Me</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="se.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;🤪&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+          
+          <span>Symbolic Execution</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="rc.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;😇&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+          
+          <span>Reversible Computing</span>
+        </div>
+      </a>
+    
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="sc.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;😃&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+          
+          <span>Smart Campus</span>
+        </div>
+      </a>
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+      <div class="Header__Icon">
+        <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;🤪&lt;/text&gt;&lt;/svg&gt;"></span>
+      </div>
+    
+    <h1 class="Header__Title">Symbolic Execution</h1>
+    
+  </header>
+  <article id="https://www.notion.so/be4452ed04824cdd85c789a69322486a" class="PageRoot"><div id="https://www.notion.so/1e3acd1f837b43d2a0556530449747fe" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">知乎上有一篇对符号执行近些年的前沿研究较为详细的综述：</span></span></p></div><div id="https://www.notion.so/a183b69916624c5399a599dd47cc8df0" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://zhuanlan.zhihu.com/p/599054963">【论文总结】The Evolution of Symbolic Execution Engines - 知乎 (zhihu.com)</a></span></span></p></div><div id="https://www.notion.so/f2c16a02b6fd433b9e18a46c6968153e" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/4a97f6cb60d64efcb03e7d95222edcf1" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">近些年学术界符号执行引擎优化的主要思路大体可以分为以下两类：</span></span></p></div><ol class="NumberedListWrapper"><li id="https://www.notion.so/97b8b2cf529f44b19aec260aa3a4404d" class="NumberedList" value="1"><span class="SemanticStringArray"><span class="SemanticString">解释型：在程序</span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">执行</strong></span><span class="SemanticString">过程中，对程序代码（通常是</span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">中间语言（IR）</strong></span><span class="SemanticString">或</span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">机器指令</strong></span><span class="SemanticString">）进行解释来构建这种映射关系。一般而言，对程序指令进行这类解释执行，相比直接执行程序速度会变慢。故有些符号执行引擎会区分指令操作数是否包含符号值，如果包含，则解释执行；否则直接执行源程序代码。</span></span></li><li id="https://www.notion.so/24a5f6d4db0b475f8a5adfdf4bb7f123" class="NumberedList" value="2"><span class="SemanticStringArray"><span class="SemanticString">编译型：在程序</span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">编译</strong></span><span class="SemanticString">过程中，将这种映射过程编译到程序代码中，在程序执行时进行符号表达式的构建。相较于解释型，这种方法将“解释”过程移动到编译时，只解释程序代码一次。由于在执行过程中速度接近原始代码，这种设计显著提高了速度。</span></span></li></ol><div id="https://www.notion.so/85a1a42f82dc4a3fb0234cc6d00e4fb0" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">我们比较熟悉的Angr，KLEE都属于解释型，但编译型才是前沿的主流关注点</span></span></p></div><div id="https://www.notion.so/dbdcbdcff58e4c028606c855dc4452d7" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><h3 id="https://www.notion.so/11c52898bccd467d9d50c5862bcd6a9f" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--3"><a class="Anchor" href="#https://www.notion.so/11c52898bccd467d9d50c5862bcd6a9f"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">SymCC</strong></span></span></h3><div id="https://www.notion.so/f10a7dedd634427389e9850e1701b184" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">把 QSYM 解释执行 LLVM IR 的函数，通过动态链接库，链接进来，到 binary 层去执行。</span></span></p></div><div id="https://www.notion.so/d379fd601c2a49999b4d18c135afbe5a" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="http://www.hackdig.com/04/hack-317366.htm">白泽带你读论文丨Symbolic execution with SYMCC: Don’t interpret, compile!_黑客技术 </a></span></span></p></div><div id="https://www.notion.so/200d768615774d53b85e39906c48c97f" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><h3 id="https://www.notion.so/2f5cdf0a18a741279322607e860806b9" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--3"><a class="Anchor" href="#https://www.notion.so/2f5cdf0a18a741279322607e860806b9"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">SymQEMU</span></span></h3><div id="https://www.notion.so/8726b2d08db146d88d5a0ab4df0ca8cc" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">借用并扩展了 QEMU 中的 TCG (Tiny Code Generator)，以支持 Symbolic Execution。对比 SymCC，这次插桩的是 QEMU 的 TCG 而不是 LLVM IR；对比 S2E (也用了 TCG)，把符号执行的 runtime 也 compile 进 QEMU 去执行了从而加速（思路和 SymCC 是一样的）。</span></span></p></div><div id="https://www.notion.so/ac56e10802ae45e78061defbb76f0105" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><h3 id="https://www.notion.so/1725ba038b35409980f0908a8dc20705" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--3"><a class="Anchor" href="#https://www.notion.so/1725ba038b35409980f0908a8dc20705"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">SymSAN</span></span></h3><div id="https://www.notion.so/649b2c3081694e3792da92727806a805" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">SymSAN 在SymCC的基础上，将符号执行看作是数据流分析的一种特殊形式，结合基于LLVM的数据流分析框架DFSAN，对符号表达式的管理进行优化，提高了执行速度</span></span></p></div><div id="https://www.notion.so/c166e33c6c574538b4f1d140fcc55e17" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/81450c86fa0b43eeb004d5f8b6637d3f" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">作者 BLOG </span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://chengyusong.github.io/fuzzing/2020/11/18/kirenenko.html">Kirenenko: Dynamic Symbolic Execution as Taint Analysis | Chengyu Song’s Blog</a></span></span></p></div><div id="https://www.notion.so/b4410f17e1f04bec948752461c2d703b" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/9d662db2fd5a48c086ac470c1e71d58d" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://zhuanlan.zhihu.com/p/555098749">【论文阅读】SYMSAN: Time and Space Efficient Concolic Execution via Dynamic Data-flow Analysis (USENIX&#x27;22) - 知乎 (zhihu.com)</a></span></span></p></div><div id="https://www.notion.so/102fea59326d467386cc72cf96112ad0" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><h3 id="https://www.notion.so/8d2578327cc54749822aea3d773ac3a1" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--3"><a class="Anchor" href="#https://www.notion.so/8d2578327cc54749822aea3d773ac3a1"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">SymFusion</strong></strong></span></span></h3><div id="https://www.notion.so/64abfb17dd9044be910d0fab4cf25974" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">SymFusion 分析了编译型（编译时插桩）和解释型（执行时插桩）两类技术的优缺点：</span></span></p></div><div id="https://www.notion.so/21a69c7526be4a38ade1386280f29b00" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">解释型：</strong></span></span></p><div class="Text__Children"><div id="https://www.notion.so/97b4aa632f5443c2aec7317d86781faf" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">优点：</span></span></p><div class="Text__Children"><ol class="NumberedListWrapper"><li id="https://www.notion.so/ee3e66201e984bbdab38d7121b1bb919" class="NumberedList" value="1"><span class="SemanticStringArray"><span class="SemanticString">不需要重新编译程序</span></span></li><li id="https://www.notion.so/44b83e1d4e434c9a959064e3d10e8bac" class="NumberedList" value="2"><span class="SemanticStringArray"><span class="SemanticString">现代DBT（动态二进制转换工具）工具会生成架构依赖的IR来进行插桩，很容易支持大规模指令集</span></span></li><li id="https://www.notion.so/0ddab29214ee4eadb707b9f7461c47f4" class="NumberedList" value="3"><span class="SemanticStringArray"><span class="SemanticString">在二进制层面，程序语言设计的高维度概念被简化了，如在pointer、unsigned value、unsigned struct field之间并无区别</span></span></li></ol><div id="https://www.notion.so/2d66a00f74f14321b509edb18780a4dd" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/f2776ace0aa64737847910413ac79710" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">缺点：</span></span></p></div><ol class="NumberedListWrapper"><li id="https://www.notion.so/2a8dfb7c39834ebdb319fbac3e64c528" class="NumberedList" value="1"><span class="SemanticStringArray"><span class="SemanticString">插桩代码效率低下，通常在指令级或基本块级；DBT在JIT（即时编译）过程中优化能力有限；DBT会差异如一些无分支代码，当触发条件时让executor去调用helpers执行</span></span></li><li id="https://www.notion.so/57ca1abc4d4948faa27c94a95ea38c96" class="NumberedList" value="2"><span class="SemanticStringArray"><span class="SemanticString">DBT使用内存中的virtual CPU来跟踪原始程序状态，需要额外内存访问来更新</span></span></li><li id="https://www.notion.so/c6f33c785a8f4142bbaf0d1ed3c86f0a" class="NumberedList" value="3"><span class="SemanticStringArray"><span class="SemanticString">DBT的IR并不显示支持专用指令，而是在运行时去调用helper函数处理，如QEMU在处理x86的division operations、vectorized instructions和floating-point operations时。KLEE使用function models，比如klee-clibc，很容易编写但容易出错；S2E 将helper函数也转换成LLVM IR并使用KLEE去解释执行</span></span></li><li id="https://www.notion.so/6db14510c1ea4127befbcf81afb4e2c2" class="NumberedList" value="4"><span class="SemanticStringArray"><span class="SemanticString">即使executor能够对专用指令进行插桩，生成的符号表达式可能非常复杂以至于SMT solver无法求解</span></span></li></ol></div></div></div></div><div id="https://www.notion.so/d9f1407b45624ffaab2040f26b846e4b" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/3d3e18c9dc1d48c1b1e672a46d5ca943" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">编译型：</strong></span></span></p><div class="Text__Children"><div id="https://www.notion.so/a4f7324166094e93b2c4add67ea46635" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">优点：</span></span></p></div><ol class="NumberedListWrapper"><li id="https://www.notion.so/3ce0ca6f61b049b5b6ecb1847f05dcb8" class="NumberedList" value="1"><span class="SemanticStringArray"><span class="SemanticString">执行时无插桩带来的开销</span></span></li><li id="https://www.notion.so/34683eb9f68342038130966446c02c42" class="NumberedList" value="2"><span class="SemanticStringArray"><span class="SemanticString">针对IR进行插桩，不仅能进行更复杂的代码转化，而且能够受益于原有的编译优化手段</span></span></li><li id="https://www.notion.so/c629bde04d814241b831b6201f0f9de1" class="NumberedList" value="3"><span class="SemanticStringArray"><span class="SemanticString">支持跨架构</span></span></li></ol><div id="https://www.notion.so/f0c614bb74c84a0e8b39fdd247d4c07a" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/6669361aee544ac6a7918dc268a988a3" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">缺点：</span></span></p></div><ol class="NumberedListWrapper"><li id="https://www.notion.so/1c0d6b92672c4a269d9ba8d4781579de" class="NumberedList" value="1"><span class="SemanticStringArray"><span class="SemanticString">需要引入自定义的编译工具链</span></span></li><li id="https://www.notion.so/2046135d894749cca04371faf54356c4" class="NumberedList" value="2"><span class="SemanticStringArray"><span class="SemanticString">新增编译工具链在原始编译过程中放置的位置难以确定。放到前面能够受益于之后的优化，但最终代码与之前差异过大，如替换一些call为inline code，可能导致它们不被插桩而影响符号执行分析</span></span></li><li id="https://www.notion.so/d7ae5f8a1bc940258c0c6c9936968896" class="NumberedList" value="3"><span class="SemanticStringArray"><span class="SemanticString">当一个函数未插桩时，需要创建一个函数模型来模仿这个函数的行为</span></span></li><li id="https://www.notion.so/b3b2c1d9bc7c462ebb23b10e573eacd1" class="NumberedList" value="4"><span class="SemanticStringArray"><span class="SemanticString">IR继承了很多复杂专用的数据类型，如array、vector、struct，增大了编写pass的复杂度</span></span></li></ol></div></div><div id="https://www.notion.so/c8b80b1e78744d8c85d79c9330bd58f2" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/6009d15cdf524215870b700d9c6240ff" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">SymFusion结合两类技术，对不同的代码使用不同的插桩方式，如下图。internal code主要是用户程序代码，而external code时其他编译时未插桩的、采用动态链接的代码</span></span></p></div><div id="https://www.notion.so/7885b4a62d264489a0ac26eddb8739bc" class="Image Image--Normal"><figure><a href="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F98690828-ddc6-41e3-bc23-06bfca29c82b%2FUntitled.png?width=624&amp;table=block&amp;id=7885b4a6-2d26-4489-a0ac-26eddb8739bc"><img src="https://www.notion.so/signed/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F98690828-ddc6-41e3-bc23-06bfca29c82b%2FUntitled.png?width=624&amp;table=block&amp;id=7885b4a6-2d26-4489-a0ac-26eddb8739bc" style="width:624px"/></a><figcaption><span class="SemanticStringArray"></span></figcaption></figure></div><div id="https://www.notion.so/74c79cc49be04784b90cab188711d943" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">SymFusion的执行流程，核心问题是如何协调两种插桩代码的执行（包括程序执行的具体数据、DBT需要的virtual CPU状态以及生成的符号表达式）</span></span></p></div></article>
+  <footer class="Footer">
+  <div>&copy; Hi!  2022</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
+</body>
+
+</html>
