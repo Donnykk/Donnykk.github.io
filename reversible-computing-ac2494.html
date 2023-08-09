@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Chrome, Firefox OS and Opera Status Bar Color -->
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css">
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism.min.css">
+<link rel="stylesheet" type="text/css" href="css/SourceSansPro.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
+<link rel="stylesheet" type="text/css" href="css/notablog.css">
+<!-- Favicon -->
+
+  <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;📖&lt;/text&gt;&lt;/svg&gt;">
+
+<style>
+  :root {
+    font-size: 20px;
+  }
+</style>
+  <title>Reversible Computing&nbsp;|&nbsp;Hi! </title>
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Reversible Computing">
+  
+  
+  <style>
+    .DateTagBar {
+      margin-top: 1.0rem;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="Navbar">
+  <a href="index.html">
+    <div class="Navbar__Btn">
+      
+        <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;📖&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+      
+      <span>Home</span>
+    </div>
+  </a>
+  
+    
+      <span class="Navbar__Delim">&centerdot;</span>
+      <a href="about.html">
+        <div class="Navbar__Btn">
+          
+            <span><img class="inline-img-icon" src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text text-anchor=%22middle%22 dominant-baseline=%22middle%22 x=%2250%22 y=%2255%22 font-size=%2280%22&gt;😀&lt;/text&gt;&lt;/svg&gt;"></span>&nbsp;
+          
+          <span>About</span>
+        </div>
+      </a>
+    
+  
+    
+  
+    
+  
+</nav>
+  <header class="Header">
+    
+    <div class="Header__Spacer Header__Spacer--NoCover">
+    </div>
+    
+    <h1 class="Header__Title">Reversible Computing</h1>
+    
+  </header>
+  <article id="https://www.notion.so/ac2494c058f4440b93b9dfb9773613a1" class="PageRoot"><h2 id="https://www.notion.so/c238deb0457b48a0b2b1f6f5f8d81c3e" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/c238deb0457b48a0b2b1f6f5f8d81c3e"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">Idea:</span></span></h2><div id="https://www.notion.so/c3cff7fc44df40db9bb6c8e23777f99a" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">自动生成逆向程序</span></span></p></div><div id="https://www.notion.so/5456d398f56649edb54259726fc2be00" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">LLVM IR ⇒ Binary  的过程中自动生成 Lifting 工具？</span></span></p></div><div id="https://www.notion.so/e11b0c8a49114583979ef2c959cf6360" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/c1a1d85aa32641f58cc198f5df63c13a" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">对于可逆编程，把两个方向的程序分开写是完全没有问题的，但是一般而言程序越长越容易出错，而且也无法保证两个程序能够一一对应，因此最好可以把这个可逆的保证融入在编程语言中。这也是当下编程语言研究中的一个领域——可逆编程语言，其具体概念可以参考这篇文献：</span><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://link.springer.com/chapter/10.1007/978-3-540-70583-3_22"><mark class="SemanticString__Fragment SemanticString__Fragment--HighlightedColor SemanticString__Fragment--ColorGray"><span class="SemanticString__Fragment SemanticString__Fragment--Unknown"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">Reversible Flowchart Languages and the Structured Reversible Program Theorem</em></span></mark></a></span><span class="SemanticString">。</span></span></p></div><h2 id="https://www.notion.so/fb9fae7a404e46069167955901b2faf6" class="ColorfulBlock ColorfulBlock--ColorDefault Heading Heading--2"><a class="Anchor" href="#https://www.notion.so/fb9fae7a404e46069167955901b2faf6"><svg width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><span class="SemanticStringArray"><span class="SemanticString">Research:</span></span></h2><div id="https://www.notion.so/5a554a85a38749da810cfe490e86277f" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://dl.acm.org/doi/10.1145/3409000"><mark class="SemanticString__Fragment SemanticString__Fragment--HighlightedColor SemanticString__Fragment--ColorGray"><span class="SemanticString__Fragment SemanticString__Fragment--Unknown"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">Sparcl: a language for partially-invertible computation</em></span></mark></a></span></span></p></div><div id="https://www.notion.so/dcab2b18016849cda161677fc70b40e9" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">部分可逆编程语言 Sparcl —— Wang &amp; Matsuda</strong></span></span></p></div><div id="https://www.notion.so/d218af897daf4052bf5ebac3cb2ea4aa" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/130416ac4df5421f931054c1a243ed1b" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://link.springer.com/chapter/10.1007/978-3-319-89884-1_2"><mark class="SemanticString__Fragment SemanticString__Fragment--HighlightedColor SemanticString__Fragment--ColorGray"><span class="SemanticString__Fragment SemanticString__Fragment--Unknown"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">HOBiT: Programming Lenses Without Using Lens Combinators</em></span></mark></a></span></span></p></div><div id="https://www.notion.so/b6cab7910f6f4dc78ec2f5970638cfb6" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">高阶双向编程语言 HOBiT —— Wang &amp; Matsuda</strong></span></span></p></div><div id="https://www.notion.so/c7117edfd51e4f1ba1774441a565af64" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">透镜(Lens)</em></span><span class="SemanticString">是源数据对象和视图数据对象之间的一对映射。本文提出 HOBiT 语言，其中 Lenses 被表示为标准函数，透镜组合被映射到带有绑定器的语言构造。这种设计使程序员能够以灵活的函数式风格编写双向程序，同时又能充分利用 Lenses 的表现力。</span></span></p></div><div id="https://www.notion.so/4a56bafaaee2472ea8cc8ae006ab6064" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/5ac765485c7346308346ce2b6b8bd354" class="ColorfulBlock ColorfulBlock--ColorGray Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://www.jstage.jst.go.jp/article/jssst/33/3/33_3_108/_article/-char/en"><span class="SemanticString__Fragment SemanticString__Fragment--Unknown"><mark class="SemanticString__Fragment SemanticString__Fragment--HighlightedColor SemanticString__Fragment--ColorGray"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">Robert Glück and Tetsuo Yokoyama. 2016. A Linear-Time Self-Interpreter of a Reversible Imperative Language.</em></mark></span></a></span></span></p></div><div id="https://www.notion.so/22cceaa36d4543c7a313ac8ea3f70356" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">提出了一个r-Turing完全可逆命令式语言的线性时间可逆自解释器。</span></span></p></div><div id="https://www.notion.so/821cae1ca45e46ef8de9330200a53341" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">对于可逆语言 L（即 L 程序只计算单射函数），L 程序 </span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">rint</strong></span><span class="SemanticString"> 是一个源语言 S 的一个可逆自解释器，有：  </span><span class="SemanticString"><em class="SemanticString__Fragment SemanticString__Fragment--Italic"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">[[rint]]L (p.d) = (p.d′)  ⇐⇒  [[p]]S (d) = d′</strong></em></span></span></p></div><div id="https://www.notion.so/2ceb87d1310f4e36879f904d840509a5" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">本文定义了简洁的可逆语言 R-WHILE，它是一种具有树状数据结构的结构化命令式语言，使用它来构建自解释器。这种语言是基于琼斯的不可逆转的语言。</span></span></p></div><div id="https://www.notion.so/c699028b0e544e9fa78f3ebd05acc7bf" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div><div id="https://www.notion.so/bc8f5438601b475594f46518451e48d5" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString"><a class="SemanticString__Fragment SemanticString__Fragment--Link" href="https://www.sciencedirect.com/science/article/pii/S0020019019300523"><mark class="SemanticString__Fragment SemanticString__Fragment--HighlightedColor SemanticString__Fragment--ColorGray"><span class="SemanticString__Fragment SemanticString__Fragment--Unknown"><em class="SemanticString__Fragment SemanticString__Fragment--Italic">Constructing a binary tree from its traversals by reversible recursion and iteration</em></span></mark></a></span></span></p></div><div id="https://www.notion.so/ae86c8b4c1b84430a06ee02ceff95538" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">提出了两种在可逆计算背景下用于</span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold">生成先序和中序二叉树标号</strong></span><span class="SemanticString">的算法。可逆遍历直接定义了重构二叉树的逆算法，具有与可逆遍历相同的线性时间和空间需求。</span></span></p></div><div id="https://www.notion.so/a9fd98c8ad2c4d55bf73cb254311dbd6" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">本文用可逆编程语言编写遍历过程，构造过程可以定义为语言的确定性逆向语义的结果。与不可逆语言不同，所需的二叉树构造过程从用遍历过程开始就立即开始。</span></span></p></div><div id="https://www.notion.so/dcf76bdab283420db379ecc559ff14dc" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"><span class="SemanticString">R-WHILE 语言</span><span class="SemanticString"><strong class="SemanticString__Fragment SemanticString__Fragment--Bold"><em class="SemanticString__Fragment SemanticString__Fragment--Italic"><span class="SemanticString__Fragment SemanticString__Fragment--Unknown"> </span></em></strong></span><span class="SemanticString">是一种通用可逆语言，这意味着它和任何可逆语言一样强大，并且允许使用动态数据结构进行可逆编程，本文对 R-WHILE 进行了扩展，使其包含可逆递归。</span></span></p></div><div id="https://www.notion.so/754e6a00cb7844009900ae5b040ac64e" class="ColorfulBlock ColorfulBlock--ColorDefault Text"><p class="Text__Content"><span class="SemanticStringArray"></span></p></div></article>
+  <footer class="Footer">
+  <div>&copy; Hi!  2022</div>
+  <div>&centerdot;</div>
+  <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
+      rel="noopener noreferrer">Notablog</a>.
+  </div>
+</footer>
+</body>
+
+</html>
